@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="107698e3-7a05-4718-a025-50906287d5b7"
   name="UserCase" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -181,6 +181,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="e8efc1c3-b7b2-403b-8ee8-1ece0f8e3c3e"
+            isDerived="false"
+            sourceEndRoleName="Guest"
+            targetEndRoleName="Lọc kết quả tìm kiếm"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="759df62c-f857-43e3-8088-99867e8d7b7d"
+              LastKnownName="Sắp xếp kết quả tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85842ffb-0136-44ed-843b-a3dd7d0230dc"
+                  name="Guest"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="20e79291-2f0d-414f-8eba-0dc3b42b2e80"
+                  name="Lọc kết quả tìm kiếm"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -189,17 +228,7 @@
         Id="def52335-3909-41aa-a7c5-9ee61bfd3a8b"
         name="Đăng Ký"
         isAbstract="false"
-        isLeaf="false">
-        <extendedCases>
-          <extend
-            Id="e80ee75e-56f7-4721-87d4-62f70b0f9c35">
-            <useCaseMoniker
-              Id="06dd21b5-1199-4815-a656-76c587ad5814"
-              LastKnownName="Đăng ký bằng facebook"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-        </extendedCases>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -207,22 +236,15 @@
         name="Đăng nhập"
         isAbstract="false"
         isLeaf="false">
-        <extendedCases>
-          <extend
-            Id="66f96b04-a00a-4eb8-afc4-9fcfa136b3dc">
+        <additions>
+          <include
+            Id="851e09fe-cc4a-45ce-aa8b-30d0b672b69f">
             <useCaseMoniker
-              Id="3e989dcd-e013-43cc-9034-a3f27ba2b623"
-              LastKnownName="Đăng nhập bằng facebook"
+              Id="36dfc68a-4dfb-4feb-87d6-51c0da24c787"
+              LastKnownName="Đăng xuất"
               LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="776dc347-bfb8-46b6-9deb-87fc37b634ec">
-            <useCaseMoniker
-              Id="29d11d5b-1630-499c-973a-eeee4f73ba10"
-              LastKnownName="Quên mật khẩu"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-        </extendedCases>
+          </include>
+        </additions>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -230,34 +252,13 @@
         Id="06dd21b5-1199-4815-a656-76c587ad5814"
         name="Đăng ký bằng facebook"
         isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="3e989dcd-e013-43cc-9034-a3f27ba2b623"
-        name="Đăng nhập bằng facebook"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="b0fab4e5-3610-4b42-addc-87c3c15c2e4a"
-        name="Tìm kiếm"
-        isAbstract="false"
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="8068ee4a-a685-484a-99b1-3e3cbf2dea78">
+            Id="bc98f65c-c8fb-46fe-a07f-914ca0e224f0">
             <useCaseMoniker
-              Id="9312f602-ad62-4cc6-ba62-b10f79e21161"
-              LastKnownName="Tìm kiếm theo tên món đồ"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="07182f31-1b78-4bc2-b835-ebb48ff1a8ff">
-            <useCaseMoniker
-              Id="ba8fc6e9-c367-4a44-92be-dca0a70976dd"
-              LastKnownName="Tìm kiếm nâng cao"
+              Id="def52335-3909-41aa-a7c5-9ee61bfd3a8b"
+              LastKnownName="Đăng Ký"
               LastKnownLocation="UserCase.uml" />
           </extend>
         </extendedCases>
@@ -265,17 +266,71 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
-        Id="9312f602-ad62-4cc6-ba62-b10f79e21161"
-        name="Tìm kiếm theo tên món đồ"
+        Id="3e989dcd-e013-43cc-9034-a3f27ba2b623"
+        name="Đăng nhập bằng facebook"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b478b269-1922-4a72-92a9-df4d29013458">
+            <useCaseMoniker
+              Id="466ce62c-665b-4baa-8809-2224049c9626"
+              LastKnownName="Đăng nhập"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b0fab4e5-3610-4b42-addc-87c3c15c2e4a"
+        name="Tìm kiếm"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="a4edd6d5-fa50-44cb-9bd9-f3b85d61dca3">
+            <useCaseMoniker
+              Id="759df62c-f857-43e3-8088-99867e8d7b7d"
+              LastKnownName="Sắp xếp kết quả tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9312f602-ad62-4cc6-ba62-b10f79e21161"
+        name="Tìm kiếm cơ bản"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="836493f2-bc19-4f95-b88c-19b9df1538ef">
+            <useCaseMoniker
+              Id="b0fab4e5-3610-4b42-addc-87c3c15c2e4a"
+              LastKnownName="Tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="ba8fc6e9-c367-4a44-92be-dca0a70976dd"
         name="Tìm kiếm nâng cao"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="7803b665-2d36-4e81-9458-9b0fa0f29abb">
+            <useCaseMoniker
+              Id="b0fab4e5-3610-4b42-addc-87c3c15c2e4a"
+              LastKnownName="Tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -289,14 +344,55 @@
         Id="0345963f-2ef2-4770-840a-95d1edd7a7d7"
         name="Đăng món đồ"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <additions>
+          <include
+            Id="a035f076-354d-488a-b502-8ef6af2ff727">
+            <useCaseMoniker
+              Id="a8a85bf5-55aa-472e-bbd6-88bd7d2e683e"
+              LastKnownName="Xóa món đồ"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+          <include
+            Id="d37df0d6-0f3e-4c13-ac47-3283912d4ff5">
+            <useCaseMoniker
+              Id="92a6513c-1523-418b-af1f-2a3d74d6a87a"
+              LastKnownName="Chỉnh sửa món đồ đã đăng"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+          <include
+            Id="6203afca-7c22-46a9-811e-dc453cd713fb">
+            <useCaseMoniker
+              Id="14b9dec5-8c3a-43fe-bf42-eeede7e9eec6"
+              LastKnownName="Cập nhật trạng thái món đồ"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+          <include
+            Id="ab66e1df-1c48-4d4a-9bb3-ad41b0bc0416">
+            <useCaseMoniker
+              Id="c69bb2ad-de8d-452b-bb49-f551d47c6e25"
+              LastKnownName="Gợi ý các sản phẩm trao đổi"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="dac222c9-98df-4c13-838f-228a27ce126c"
         name="Like/Share bằng facebook"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="76af3796-4b05-4073-b23a-cedb73dbec2e">
+            <useCaseMoniker
+              Id="2f2b4f1a-8db3-4b9d-8513-813768e1c3e8"
+              LastKnownName="Xem món đồ"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -310,31 +406,41 @@
         Id="bff7b134-3372-49dc-9ed8-23e6a73d74a2"
         name="Comment"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9a4f9b83-a624-4731-af89-ed00c60b879b">
+            <useCaseMoniker
+              Id="2f2b4f1a-8db3-4b9d-8513-813768e1c3e8"
+              LastKnownName="Xem món đồ"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="7fc4189d-155d-4788-a773-d6d1dc398677"
         name="Report"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="06495304-7117-4865-8a93-b75dd5d2ebb4">
+            <useCaseMoniker
+              Id="2f2b4f1a-8db3-4b9d-8513-813768e1c3e8"
+              LastKnownName="Xem món đồ"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="8469482b-81cb-4ae2-86af-3966634335eb"
         name="Nhắn tin"
         isAbstract="false"
-        isLeaf="false">
-        <additions>
-          <include
-            Id="2315e760-e72d-4c95-9a07-23d0aa19a5da">
-            <useCaseMoniker
-              Id="466ce62c-665b-4baa-8809-2224049c9626"
-              LastKnownName="Đăng nhập"
-              LastKnownLocation="UserCase.uml" />
-          </include>
-        </additions>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -348,17 +454,7 @@
         Id="36dfc68a-4dfb-4feb-87d6-51c0da24c787"
         name="Đăng xuất"
         isAbstract="false"
-        isLeaf="false">
-        <additions>
-          <include
-            Id="50caeb34-0f01-4b06-8610-17a84a4e33e1">
-            <useCaseMoniker
-              Id="466ce62c-665b-4baa-8809-2224049c9626"
-              LastKnownName="Đăng nhập"
-              LastKnownLocation="UserCase.uml" />
-          </include>
-        </additions>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -372,7 +468,17 @@
         Id="88c1f7ae-3fa0-476f-986a-9d49aad44bd7"
         name="Đánh giá người bán"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="0d93ac45-5df0-406a-b403-272af921a5c9">
+            <useCaseMoniker
+              Id="2f2b4f1a-8db3-4b9d-8513-813768e1c3e8"
+              LastKnownName="Xem món đồ"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -710,6 +816,162 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="261203e2-86c0-4e16-aa24-a6ccb0383558"
+            isDerived="false"
+            sourceEndRoleName="Người dùng"
+            targetEndRoleName="Cập nhật trạng thái món đồ"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="14b9dec5-8c3a-43fe-bf42-eeede7e9eec6"
+              LastKnownName="Cập nhật trạng thái món đồ"
+              LastKnownLocation="UserCase.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a080fdbb-a8d6-46d0-b3e0-6e7d8d7ebd95"
+                  name="Người dùng"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e891f52a-28cc-4f79-8ab0-9eb3cfadf449"
+                  name="Cập nhật trạng thái món đồ"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="32acc950-3855-492f-8bbf-c59f8b35c6de"
+            isDerived="false"
+            sourceEndRoleName="Người dùng"
+            targetEndRoleName="Xóa món đồ"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a8a85bf5-55aa-472e-bbd6-88bd7d2e683e"
+              LastKnownName="Xóa món đồ"
+              LastKnownLocation="UserCase.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a04e3148-261f-44e6-b138-d258dfb46443"
+                  name="Người dùng"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9fb7b3d9-4206-48a5-b4e8-794337224476"
+                  name="Xóa món đồ"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1a3e5732-6ac4-4f11-8e63-358376fd60f1"
+            isDerived="false"
+            sourceEndRoleName="Người dùng"
+            targetEndRoleName="Xác nhận tài khoản"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0789e6aa-cda0-4618-af3c-cbc9f80ebfe6"
+              LastKnownName="Xác nhận tài khoản"
+              LastKnownLocation="UserCase.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4105acfe-9c49-4918-9931-4884cda314d5"
+                  name="Người dùng"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e46e6b93-8072-43e7-872d-d261acc2aa03"
+                  name="Xác nhận tài khoản"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="99664dbb-0620-4d8b-8fc9-ad488c172361"
+            isDerived="false"
+            sourceEndRoleName="Người dùng"
+            targetEndRoleName="Gợi ý các sản phẩm trao đổi"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c69bb2ad-de8d-452b-bb49-f551d47c6e25"
+              LastKnownName="Gợi ý các sản phẩm trao đổi"
+              LastKnownLocation="UserCase.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1bf1c585-b586-4ee0-9418-16c8142db4dc"
+                  name="Người dùng"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4a41cb1-2773-4dae-b9d4-6d90332cb3b9"
+                  name="Gợi ý các sản phẩm trao đổi"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -718,79 +980,20 @@
         Id="2f2b4f1a-8db3-4b9d-8513-813768e1c3e8"
         name="Xem món đồ"
         isAbstract="false"
-        isLeaf="false">
-        <extendedCases>
-          <extend
-            Id="a5fbc886-d771-4d4c-a188-36f21ea02387">
-            <useCaseMoniker
-              Id="dac222c9-98df-4c13-838f-228a27ce126c"
-              LastKnownName="Like/Share bằng facebook"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="e8cf70ac-d6e4-419f-97dd-c4540d17d9b2">
-            <useCaseMoniker
-              Id="bff7b134-3372-49dc-9ed8-23e6a73d74a2"
-              LastKnownName="Comment"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="48d5adf0-1171-40a5-acd7-18c196a922a0">
-            <useCaseMoniker
-              Id="7fc4189d-155d-4788-a773-d6d1dc398677"
-              LastKnownName="Report"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="f9ef94eb-6e50-4d99-87c9-21d981aaed95">
-            <useCaseMoniker
-              Id="88c1f7ae-3fa0-476f-986a-9d49aad44bd7"
-              LastKnownName="Đánh giá người bán"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="a95ec410-9d00-44cb-bbf9-5490f39fb15e">
-            <useCaseMoniker
-              Id="e15fcca4-0795-49b6-9f42-10f1d0308e1c"
-              LastKnownName="Follow"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-        </extendedCases>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="e15fcca4-0795-49b6-9f42-10f1d0308e1c"
         name="Follow"
         isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="18cefd55-52fa-42f2-b5fb-48457b4f7c6e"
-        name="Quản lý tài khoản"
-        isAbstract="false"
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="70485fff-b28c-4f37-9ae8-0d563f252b97">
+            Id="18ebcf73-7488-4e3a-9b8d-ca10afad8a6e">
             <useCaseMoniker
-              Id="09f31b25-ca2b-4271-aebb-922ab8467123"
-              LastKnownName="Cập nhật thông tin cá nhân"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="8dd445f0-f095-4831-9bb6-93169ae6d85d">
-            <useCaseMoniker
-              Id="bbb263bb-2b33-46b4-bbb3-f8a659ecceff"
-              LastKnownName="Xóa tài khoản"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="4fd71278-6457-4b91-a2e0-d177ab789465">
-            <useCaseMoniker
-              Id="bd485105-f1a5-49d4-8b78-f3d78adaaa2e"
-              LastKnownName="Xem danh sách follow"
+              Id="2f2b4f1a-8db3-4b9d-8513-813768e1c3e8"
+              LastKnownName="Xem món đồ"
               LastKnownLocation="UserCase.uml" />
           </extend>
         </extendedCases>
@@ -798,31 +1001,78 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
+        Id="18cefd55-52fa-42f2-b5fb-48457b4f7c6e"
+        name="Quản lý tài khoản"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
         Id="09f31b25-ca2b-4271-aebb-922ab8467123"
         name="Cập nhật thông tin cá nhân"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="527baffd-1c03-4be0-beb9-2aa872bae02b">
+            <useCaseMoniker
+              Id="18cefd55-52fa-42f2-b5fb-48457b4f7c6e"
+              LastKnownName="Quản lý tài khoản"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="bbb263bb-2b33-46b4-bbb3-f8a659ecceff"
         name="Xóa tài khoản"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b9076204-e64b-4cd2-b28f-6ef0d18d3594">
+            <useCaseMoniker
+              Id="18cefd55-52fa-42f2-b5fb-48457b4f7c6e"
+              LastKnownName="Quản lý tài khoản"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="bd485105-f1a5-49d4-8b78-f3d78adaaa2e"
         name="Xem danh sách follow"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ef8f52d3-b174-4cf4-86d4-c8188bbe29e0">
+            <useCaseMoniker
+              Id="18cefd55-52fa-42f2-b5fb-48457b4f7c6e"
+              LastKnownName="Quản lý tài khoản"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="298e7568-c6d1-4ab8-acbf-7dd7f5e481a9"
         name="Nâng cấp thành viên VIP"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ed5929c2-8cbe-4cfb-b4db-f0fe483f20de">
+            <useCaseMoniker
+              Id="f8c597b3-a0ac-41e0-a2c4-0895ff924566"
+              LastKnownName="Thanh toán"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1004,6 +1254,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="69d7be09-6fdc-42fe-8bbd-feae37c572d7"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Xem danh sách report"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
+              LastKnownName="Xem danh sách report"
+              LastKnownLocation="UserCase.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="75489763-9a0d-4ad8-ae81-a85743769b00"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d99133e-9968-4f54-b5f7-52ef5eed95ef"
+                  name="Xem danh sách report"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -1012,27 +1301,20 @@
         Id="ed9ec3c9-dbe0-4fa0-b80e-c14b5b78a755"
         name="Thống kê"
         isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="be89f397-020f-4f14-910a-154375e7b0e0"
+        name="Thống kê người dùng"
+        isAbstract="false"
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="b007ca83-7829-4828-8074-29617490b701">
+            Id="a3d5decc-5d33-4cd4-b07f-a979abd5c4c3">
             <useCaseMoniker
-              Id="be89f397-020f-4f14-910a-154375e7b0e0"
-              LastKnownName="Thống kê người dùng"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="d9e6b208-d848-4261-bd35-6b2855d07fd8">
-            <useCaseMoniker
-              Id="d5b3013b-5032-4412-a091-e78d9b3b6917"
-              LastKnownName="Thống kê số bài đăng"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
-            Id="17a3d32e-44c5-40a3-9480-a85011e11173">
-            <useCaseMoniker
-              Id="0ca514f5-26fd-4e77-b7f2-f92b188b6011"
-              LastKnownName="Thống kê lượng tin nhắn"
+              Id="ed9ec3c9-dbe0-4fa0-b80e-c14b5b78a755"
+              LastKnownName="Thống kê"
               LastKnownLocation="UserCase.uml" />
           </extend>
         </extendedCases>
@@ -1040,48 +1322,61 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
-        Id="be89f397-020f-4f14-910a-154375e7b0e0"
-        name="Thống kê người dùng"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
         Id="d5b3013b-5032-4412-a091-e78d9b3b6917"
         name="Thống kê số bài đăng"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="02ddaa30-1b6c-421c-b35d-24fb40deba12">
+            <useCaseMoniker
+              Id="ed9ec3c9-dbe0-4fa0-b80e-c14b5b78a755"
+              LastKnownName="Thống kê"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="0ca514f5-26fd-4e77-b7f2-f92b188b6011"
         name="Thống kê lượng tin nhắn"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f862e657-db28-47b0-bbd7-45e4d3f5e079">
+            <useCaseMoniker
+              Id="ed9ec3c9-dbe0-4fa0-b80e-c14b5b78a755"
+              LastKnownName="Thống kê"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="30935da9-8ef4-4e46-ba26-871f025de012"
         name="Quản lý report"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9a44cee2-1e57-48d1-8f79-bdee537f3fc8">
+            <useCaseMoniker
+              Id="1c0912f6-5313-4995-ae37-578015a54610"
+              LastKnownName="Thống kê"
+              LastKnownLocation="UserCase.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
         name="Xem danh sách report"
         isAbstract="false"
-        isLeaf="false">
-        <additions>
-          <include
-            Id="7b8a361b-87c4-4faf-9374-56cc62d45099">
-            <useCaseMoniker
-              Id="30935da9-8ef4-4e46-ba26-871f025de012"
-              LastKnownName="Quản lý report"
-              LastKnownLocation="UserCase.uml" />
-          </include>
-        </additions>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1108,17 +1403,17 @@
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="2425dec5-9ab8-4b62-8def-3b47963f127b">
-            <useCaseMoniker
-              Id="30935da9-8ef4-4e46-ba26-871f025de012"
-              LastKnownName="Quản lý report"
-              LastKnownLocation="UserCase.uml" />
-          </extend>
-          <extend
             Id="d9546391-7053-4a79-87f7-619449a5e48b">
             <useCaseMoniker
               Id="04210320-ca40-413d-aba2-0d352866f801"
               LastKnownName="Quản lý users"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+          <extend
+            Id="7d32a3fa-c4ae-4ac2-9c53-4d7d511227fc">
+            <useCaseMoniker
+              Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
+              LastKnownName="Xem danh sách report"
               LastKnownLocation="UserCase.uml" />
           </extend>
         </extendedCases>
@@ -1139,10 +1434,10 @@
               LastKnownLocation="UserCase.uml" />
           </extend>
           <extend
-            Id="972f4197-6387-47b5-a979-3838cbaa248a">
+            Id="2afee299-c065-4f26-ae25-d96b0cd7c17b">
             <useCaseMoniker
-              Id="30935da9-8ef4-4e46-ba26-871f025de012"
-              LastKnownName="Quản lý report"
+              Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
+              LastKnownName="Xem danh sách report"
               LastKnownLocation="UserCase.uml" />
           </extend>
         </extendedCases>
@@ -1158,15 +1453,15 @@
     <packageHasNamedElement>
       <useCase
         Id="0f2c38fb-0c9f-4727-b859-59a6d04dce83"
-        name="Quản lý trừng phạt"
+        name="Report sai sự thật"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="6b22cce5-6628-45b6-afcf-41cf1ab91d5d">
+            Id="8df46963-d074-43e4-9fbd-c9414f0ca624">
             <useCaseMoniker
-              Id="30935da9-8ef4-4e46-ba26-871f025de012"
-              LastKnownName="Quản lý report"
+              Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
+              LastKnownName="Xem danh sách report"
               LastKnownLocation="UserCase.uml" />
           </extend>
         </extendedCases>
@@ -1212,6 +1507,287 @@
           </extend>
         </extendedCases>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="14b9dec5-8c3a-43fe-bf42-eeede7e9eec6"
+        name="Cập nhật trạng thái món đồ"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a8a85bf5-55aa-472e-bbd6-88bd7d2e683e"
+        name="Xóa món đồ"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0789e6aa-cda0-4618-af3c-cbc9f80ebfe6"
+        name="Xác nhận tài khoản"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ee167655-ca9e-4a8b-87d9-60821dccc657"
+        name="Xác nhận mail"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="60b094ec-5b6b-477a-ab22-49c58fcfecbd">
+            <useCaseMoniker
+              Id="0789e6aa-cda0-4618-af3c-cbc9f80ebfe6"
+              LastKnownName="Xác nhận tài khoản"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c28762bd-8487-4d8a-9395-f7d1a81876fb"
+        name="Xác nhận SDT"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="0c8e6cb6-bb83-4f27-8212-bef3ce7dc58f">
+            <useCaseMoniker
+              Id="0789e6aa-cda0-4618-af3c-cbc9f80ebfe6"
+              LastKnownName="Xác nhận tài khoản"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f8c597b3-a0ac-41e0-a2c4-0895ff924566"
+        name="Thanh toán"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d944a141-2b8b-40a3-bf33-97d26117ff6c"
+        name="Thanh toán qua paypal"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="88a9231a-2243-4b81-aeb1-5f045671ece4">
+            <useCaseMoniker
+              Id="f8c597b3-a0ac-41e0-a2c4-0895ff924566"
+              LastKnownName="Thanh toán"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6bf2290f-b869-4fc1-a966-68255fecf195"
+        name="Thanh toán qua thẻ cào"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c44444cc-2979-425c-9a18-f8fab1b373b9">
+            <useCaseMoniker
+              Id="f8c597b3-a0ac-41e0-a2c4-0895ff924566"
+              LastKnownName="Thanh toán"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="92be0c9f-8d89-47c7-bea8-878f881e498a"
+        name="Tìm kiếm theo giá"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2e905457-c89e-42a3-a9a0-3b57c266c782">
+            <useCaseMoniker
+              Id="ba8fc6e9-c367-4a44-92be-dca0a70976dd"
+              LastKnownName="Tìm kiếm nâng cao"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c2e14949-eee3-4a53-9d00-656505d11043"
+        name="Tìm kiếm theo danh mục"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="24b7ca6f-0e5a-47c6-9f39-0b8481236eec">
+            <useCaseMoniker
+              Id="ba8fc6e9-c367-4a44-92be-dca0a70976dd"
+              LastKnownName="Tìm kiếm nâng cao"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6002ef62-d745-4c43-bdda-7b3f145854b2"
+        name="Tìm theo địa điểm bán"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="4212ff6c-5d19-4b8c-9612-115489572cef">
+            <useCaseMoniker
+              Id="ba8fc6e9-c367-4a44-92be-dca0a70976dd"
+              LastKnownName="Tìm kiếm nâng cao"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="759df62c-f857-43e3-8088-99867e8d7b7d"
+        name="Sắp xếp kết quả tìm kiếm"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5fa0f259-51f6-4056-afc8-bc566835e4dd"
+        name="Sắp xếp theo alpha"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c2c72267-ec3c-40cb-a3ed-828414dff0f3">
+            <useCaseMoniker
+              Id="759df62c-f857-43e3-8088-99867e8d7b7d"
+              LastKnownName="Sắp xếp kết quả tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8eae7bb3-606a-4958-869f-1a5fa322404d"
+        name="Sắp xếp theo ngày đăng"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2a82bfe8-e0b1-4bfa-a75c-ab43125426f1">
+            <useCaseMoniker
+              Id="759df62c-f857-43e3-8088-99867e8d7b7d"
+              LastKnownName="Sắp xếp kết quả tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="68f654a1-1944-4960-bbb9-19c367d83bc8"
+        name="Lọc theo địa điểm"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="beca8916-cab6-48c9-b21a-6a22d47a9ac9"
+        name="Sắp xếp theo giá"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="45345da4-e390-4750-b3f5-8a747e925344">
+            <useCaseMoniker
+              Id="759df62c-f857-43e3-8088-99867e8d7b7d"
+              LastKnownName="Sắp xếp kết quả tìm kiếm"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c28ae70-c7ee-41c2-b5e7-4f0d1ed00279"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ef882c4b-1128-4774-b5d5-b14e9212d8a4"
+        name="Bỏ qua"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="89cdea8c-0e10-442b-a903-78d04ae3e03b"
+        name="Gửi tin nhắn cảnh báo"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f5b7388a-fb15-467f-b629-b22eee50ccce">
+            <useCaseMoniker
+              Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
+              LastKnownName="Xem danh sách report"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6a49b1d8-dd23-4d39-880b-c79d083596ae"
+        name="Xếp loại user"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="60c9f491-907b-42d1-9c1e-e9eff0b2307f">
+            <useCaseMoniker
+              Id="dc0c334b-e250-46b5-8a66-408fc5bd8f08"
+              LastKnownName="Xem danh sách report"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+          <extend
+            Id="50e8b497-54ba-4306-a2a4-bcb536f1e641">
+            <useCaseMoniker
+              Id="04210320-ca40-413d-aba2-0d352866f801"
+              LastKnownName="Quản lý users"
+              LastKnownLocation="UserCase.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c69bb2ad-de8d-452b-bb49-f551d47c6e25"
+        name="Gợi ý các sản phẩm trao đổi"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1c0912f6-5313-4995-ae37-578015a54610"
+        name="Thống kê"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

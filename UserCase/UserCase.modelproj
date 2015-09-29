@@ -22,6 +22,27 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ExportFiles\Admin.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExportFiles\Guest.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExportFiles\ps6FD7.tmp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExportFiles\PSD\UserCase.psd">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExportFiles\psFD24.tmp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExportFiles\User.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ExportFiles\UserCase.jpg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="UserCase.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -29,9 +50,11 @@
       <SubType>Content</SubType>
       <DependentUpon>UserCase.usecasediagram</DependentUpon>
     </Content>
+    <Folder Include="ExportFiles\PSD" />
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\UserCase.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="ExportFiles" />
   </ItemGroup>
 </Project>
